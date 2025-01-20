@@ -6,7 +6,7 @@ import google.generativeai as genai
 
 # Load the environment variables
 load_dotenv()
-genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+genai.configure(api_key=os.getenv("AIzaSyDpstDg93Lrg-HzU0hMokUs1KL7EPtWtL0"))
 model = genai.GenerativeModel('gemini-pro')
 
 # Set page config
