@@ -6,8 +6,8 @@ import google.generativeai as genai
 
 # Load the environment variables
 load_dotenv()
-genai.configure(api_key=os.getenv("AIzaSyDpstDg93Lrg-HzU0hMokUs1KL7EPtWtL0"))
-model = genai.GenerativeModel('gemini-pro')
+GEMINI_API_KEY = 'AIzaSyAosXpWbuvwoqQSufXGD9CcC8xTmWJU3vc'
+model = genai.GenerativeModel("gemini-1.5-flash")
 
 # Set page config
 st.set_page_config(page_title="Resume Cabin", page_icon=":robot:", layout="wide")
