@@ -6,7 +6,6 @@ import google.generativeai as genai
 
 # Load the environment variables
 load_dotenv()
-GEMINI_API_KEY = 'AIzaSyBv9PxC7SlPBFyTRBwRki6AcMKYZV5PV3k'
 genai.configure(api_key=GEMINI_API_KEY)
 model = genai.GenerativeModel("gemini-2.5-pro")
 
