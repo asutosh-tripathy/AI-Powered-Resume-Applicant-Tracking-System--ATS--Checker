@@ -6,12 +6,12 @@ import google.generativeai as genai
 
 # Load environment variables
 load_dotenv()
-genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
+genai.configure(api_key="AIzaSyD9KmhKZVs1xDd3tFcK-E0E2OIiGm1YQwo")
 
 # Initialize the Gemini model (v1 API)
 model = genai.GenerativeModel(model_name="gemini-1.5-flash")
 
-st.set_page_config(page_title="Resume Cabin", page_icon=":robot:", layout="wide")
+st.set_page_config(page_title="Resume ATS", page_icon=":robot:", layout="wide")
 
 # Background and styling (unchanged)
 page_bg_img = """<style> ... </style>"""
