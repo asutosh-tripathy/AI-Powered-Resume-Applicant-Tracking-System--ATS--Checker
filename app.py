@@ -7,7 +7,7 @@ import google.generativeai as genai
 # Load the environment variables
 load_dotenv()
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
-model = genai.GenerativeModel('gemini-pro')
+model = genai.GenerativeModel("gemini-1.5-flash")
 
 # Set page config
 st.set_page_config(page_title="Resume ATS", page_icon=":robot:", layout="wide")
