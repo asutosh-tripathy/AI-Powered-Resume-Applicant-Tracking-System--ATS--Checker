@@ -6,11 +6,12 @@ import google.generativeai as genai
 
 # Load the environment variables
 load_dotenv()
-genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
-model = genai.GenerativeModel("chat-bison-001")
+GEMINI_API_KEY = 'AIzaSyAosXpWbuvwoqQSufXGD9CcC8xTmWJU3vc'
+genai.configure(api_key=GEMINI_API_KEY)
+model = genai.GenerativeModel("gemini-1.5-flash")
 
 # Set page config
-st.set_page_config(page_title="Resume ATS", page_icon=":robot:", layout="wide")
+st.set_page_config(page_title="Resume Cabin", page_icon=":robot:", layout="wide")
 
 # Background image and style
 page_bg_img = """
@@ -99,7 +100,7 @@ if submit:
         for page in range(len(reader.pages)):
             page = reader.pages[page]
             extracted_text += page.extract_text()
-        
+
         # Generating response using the model
         input_prompt = f"""
         You are an advanced and highly experienced Applicant Tracking System (ATS) with specialized knowledge in the tech industry, including but not limited to [insert specific field here, e.g., software engineering, data science, data analysis, big data engineering]. Your primary task is to meticulously evaluate resumes based on the provided job description. Considering the highly competitive job market, your goal is to offer the best possible guidance for enhancing resumes.
@@ -148,7 +149,7 @@ if submit:
         • Application Success rates : \n\n
 
         """
-        
+
         response = model.generate_content(input_prompt)
         st.subheader("Analysis Result")
         st.write(response.text)
